@@ -1,0 +1,31 @@
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="panelexpr", # Replace with your own username
+    version="0.1.0",
+    author="actcwlf",
+    author_email="actcwlf@qq.com",
+    description="A panel data evaluator.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/actcwlf/panelexpr",
+    license='MIT',
+    packages=setuptools.find_packages(exclude=["_utils"]),
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    install_requires=[
+        'pandas>=0.20.0',
+        'numpy>=1.14.0',
+        'numba>=0.45.0',
+        'numexpr>=2.7.0',
+
+    ],
+    python_requires='>=3.6',
+)
